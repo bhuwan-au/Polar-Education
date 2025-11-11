@@ -6,8 +6,7 @@ import {
   Users,
   CheckCircle,
 } from "lucide-react";
-import Navigation from "./components/navigation";
-import Footer from "./components/footer";
+import CTASection from "@/components/cta-section";
 
 const services = [
   {
@@ -87,8 +86,6 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navigation />
-
       {/* Hero */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
@@ -101,7 +98,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -141,24 +138,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-foreground">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Contact us today to book your free consultation
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-lg"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
-
-      <Footer />
+      <CTASection />
     </main>
   );
 }

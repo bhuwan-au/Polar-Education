@@ -1,11 +1,8 @@
-import Footer from "./components/footer";
-import Navigation from "./components/navigation";
+import TeamSection from "@/components/about/teams-section";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
-      <Navigation />
-
       {/* Hero */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto">
@@ -42,27 +39,25 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
-              Our Vision
-            </h3>
-            <p className="text-muted-foreground">
-              To be the most trusted and ethical education consultancy in Nepal,
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/50 border-y border-border">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+          <div className="p-6 bg-card rounded-lg shadow-sm">
+            <h3 className="text-2xl font-bold mb-3 text-primary">Our Vision</h3>
+            <p className="text-muted-foreground italic leading-relaxed">
+              To be Nepal’s most trusted and ethical education consultancy,
               empowering students to achieve their dreams of studying at
               world-class universities and building successful international
               careers.
             </p>
           </div>
-          <div>
-            <h3 className="text-2xl font-bold mb-4 text-foreground">
+          <div className="p-6 bg-card rounded-lg shadow-sm">
+            <h3 className="text-2xl font-bold mb-3 text-primary">
               Our Mission
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground italic leading-relaxed">
               To provide personalized, transparent, and professional guidance
               that helps students make informed decisions about their higher
-              education and career paths, ensuring their success in global
+              education and career paths, ensuring success in global
               institutions.
             </p>
           </div>
@@ -71,32 +66,32 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-foreground text-center">
-            Our Values
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-12 text-primary">
+            Our Core Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: "Integrity",
-                desc: "We operate with honesty and ethical principles",
+                desc: "We operate with honesty and uphold strong ethical standards.",
               },
               {
                 title: "Transparency",
-                desc: "Clear communication at every step",
+                desc: "We communicate clearly and keep our students informed at every step.",
               },
               {
                 title: "Professionalism",
-                desc: "Expert guidance based on experience",
+                desc: "We offer expert guidance based on real experience and global insights.",
               },
               {
                 title: "Student-Centered",
-                desc: "Your success is our priority",
+                desc: "Your success is our mission — every decision starts with you.",
               },
             ].map((value, i) => (
               <div
                 key={i}
-                className="p-6 bg-card rounded-lg border border-border text-center"
+                className="p-6 bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
               >
                 <h4 className="font-bold text-lg mb-2 text-foreground">
                   {value.title}
@@ -109,40 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-foreground text-center">
-            Our Team
-          </h2>
-          <div className="space-y-8">
-            {[
-              {
-                name: "Sailendra Bikram Thapa",
-                role: "Founder & Director",
-                bio: "With a passion for international education, Sailendra founded Polar Education to bridge the gap between Nepali students and global universities. His vision of ethical and transparent guidance drives the entire organization.",
-              },
-              {
-                name: "Bibek Timsina",
-                role: "Senior Counselor",
-                bio: "With over 10 years of experience in education consultancy, Bibek helps students match their academic and career goals with the perfect university and course. His personalized approach has guided hundreds of students to success.",
-              },
-            ].map((member, i) => (
-              <div
-                key={i}
-                className="p-8 bg-card rounded-lg border border-border"
-              >
-                <h3 className="text-2xl font-bold mb-2 text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-semibold mb-4">{member.role}</p>
-                <p className="text-muted-foreground text-lg">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+      <TeamSection />
     </main>
   );
 }
