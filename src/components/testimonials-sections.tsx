@@ -3,30 +3,65 @@ import { Star } from "lucide-react";
 function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      location: "Kathmandu, Nepal",
-      text: "Polar Education made my study abroad journey incredibly smooth. Their expert guidance helped me secure admission to my dream university in Australia!",
+      name: "Dipesh Khadka",
+      location: "Australia 🇦🇺",
+      text: "I had visited several consultancies before, but none matched the trust and clarity Polar Education provided. Their detailed guidance made the entire Australia documentation process smooth and stress-free.",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image:
+        "https://ui-avatars.com/api/?name=Dipesh+Khadka&background=0D8ABC&color=fff&rounded=true",
     },
     {
-      name: "Rahul Poudel",
-      location: "Kathmandu, Nepal",
-      text: "The team was incredibly supportive throughout the entire process. From application to visa, everything was handled professionally and on time.",
+      name: "Dikshya Khadka",
+      location: "Australia 🇦🇺",
+      text: "Polar Education truly turned my dream of studying abroad into reality. The team supported me at every step and ensured my application was handled with complete care.",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/46.jpg",
+      image:
+        "https://ui-avatars.com/api/?name=Dikshya+Khadka&background=F39C12&color=fff&rounded=true",
     },
     {
-      name: "Aisha Khan",
-      location: "Kathmandu, Nepal",
-      text: "I highly recommend Polar Education. Their IELTS preparation classes were excellent and helped me achieve my target score!",
+      name: "Shabhana Shrestha",
+      location: "Australia 🇦🇺",
+      text: "The support I received from Polar Education was beyond my expectations. Their documentation guidance and one-on-one communication made the process surprisingly simple.",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/65.jpg",
+      image:
+        "https://ui-avatars.com/api/?name=Shabhana+Shrestha&background=8E44AD&color=fff&rounded=true",
+    },
+    {
+      name: "Amit Shrestha",
+      location: "Australia 🇦🇺",
+      text: "Polar helped me with university selection, scholarship guidance, and documentation without any additional cost. Their transparency and dedication truly stood out.",
+      rating: 5,
+      image:
+        "https://ui-avatars.com/api/?name=Amit+Shrestha&background=16A085&color=fff&rounded=true",
+    },
+    {
+      name: "Abishekh Kafle",
+      location: "Canada 🇨🇦",
+      text: "I was confused at the beginning, but Polar’s counsellors explained everything clearly. Their expert guidance made my Canada application journey easy and well-organized.",
+      rating: 5,
+      image:
+        "https://ui-avatars.com/api/?name=Abishekh+Kafle&background=C0392B&color=fff&rounded=true",
+    },
+    {
+      name: "Alisha Singh",
+      location: "USA 🇺🇸",
+      text: "The U.S. application process felt overwhelming at first, but Polar supported me from university selection to final submission. Their attention to detail made all the difference.",
+      rating: 5,
+      image:
+        "https://ui-avatars.com/api/?name=Alisha+Singh&background=2980B9&color=fff&rounded=true",
+    },
+    {
+      name: "Shubham Khadka",
+      location: "Australia 🇦🇺",
+      text: "From Kathmandu to my hometown, Polar’s continuous communication and clear documentation support made my entire journey effortless. I’m truly grateful for their guidance.",
+      rating: 5,
+      image:
+        "https://ui-avatars.com/api/?name=Shubham+Khadka&background=27AE60&color=fff&rounded=true",
     },
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 via-white to-blue-50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 from-blue-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
           Student <span className="text-orange-500">Success Stories</span>

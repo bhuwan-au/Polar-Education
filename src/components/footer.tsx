@@ -1,5 +1,15 @@
-import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { contactInfo } from "./contact-info";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+const socialIconUrls: Record<string, string> = {
+  facebook: "https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg",
+  instagram: "https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg",
+  linkedin: "https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linkedin.svg",
+  youtube: "https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/youtube.svg",
+  x: "https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/twitter.svg",
+  tiktok: "https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tiktok.svg",
+};
 
 export default function Footer() {
   return (
@@ -65,33 +75,62 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info + Social Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
+              {/* Address */}
               <li className="flex items-start gap-3">
-                <MapPin size={20} className="mt-1 flex-shrink-0" />
-                <span className="opacity-80">
-                  2nd Floor Star Mall, Putalisadak, Kathmandu, Nepal
-                </span>
+                <MapPin
+                  size={20}
+                  className="text-primary mt-1 flex-shrink-0"
+                />
+                <span className="opacity-80">{contactInfo.address}</span>
               </li>
+
+              {/* Phone */}
               <li className="flex items-center gap-3">
-                <Phone size={20} />
+                <Phone size={20} className="text-primary" />
                 <a
-                  href="tel:+977-01-4540500"
+                  href={`tel:${contactInfo.phone}`}
                   className="opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  +977-01-4540500
+                  {contactInfo.phone}
                 </a>
               </li>
+
+              {/* Email */}
               <li className="flex items-center gap-3">
-                <Mail size={20} />
+                <Mail size={20} className="text-primary" />
                 <a
-                  href="mailto:info@polareducation.com.np"
+                  href={`mailto:${contactInfo.email}`}
                   className="opacity-80 hover:opacity-100 transition-opacity text-sm"
                 >
-                  info@polareducation.com.np
+                  {contactInfo.email}
                 </a>
+              </li>
+
+              {/* Social Media */}
+              <li className="flex items-center gap-4 mt-2">
+                {Object.entries(contactInfo.social).map(([key, url]) => (
+                  <a
+                    key={key}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="opacity-80 hover:opacity-100 transition-opacity"
+                  >
+                    <img
+                      src={socialIconUrls[key]}
+                      alt={key}
+                      className="w-5 h-5"
+                      style={{
+                        filter:
+                          "invert(54%) sepia(72%) saturate(4653%) hue-rotate(4deg) brightness(101%) contrast(101%)",
+                      }}
+                    />
+                  </a>
+                ))}
               </li>
             </ul>
           </div>

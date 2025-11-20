@@ -4,29 +4,28 @@ import { useState } from "react";
 function FAQSection() {
   const faqs = [
     {
-      question: "What countries do you provide guidance for?",
+      question: "What services do you offer?",
       answer:
-        "We guide students for study opportunities in Australia, Canada, the United Kingdom, and the United States.",
+        "We offer professional guidance from experienced counsellors and ensure ethical, reliable handling of all application documents through our trusted university partnerships.",
     },
     {
-      question: "Do you provide visa assistance?",
+      question: "How can I apply?",
       answer:
-        "Yes, our team offers comprehensive support for the visa application process, including documentation review and interview preparation.",
+        "You may submit your application online via our portal or visit us in person at our office in Star Mall, Putalisadak, Kathmandu.",
     },
     {
-      question: "Can you help with IELTS preparation?",
-      answer:
-        "Absolutely! We provide dedicated IELTS coaching at our Kathmandu office to help students achieve their desired band scores.",
+      question: "Do you charge consultation fees?",
+      answer: "Degree and Major Mapping consultation is free.",
     },
     {
-      question: "Do you assist with university applications?",
+      question: "Which countries do you support for study abroad?",
       answer:
-        "Yes, we assist students with the complete application process including selecting universities, preparing documents, and submitting applications.",
+        "We currently serve students applying to Australia, Canada, the UK, and the USA.",
     },
     {
-      question: "Do you offer post-placement support?",
+      question: "How can I contact support?",
       answer:
-        "Yes, our support continues even after students secure admission, helping them adjust smoothly to their new environment.",
+        "You can email us at doc.polareducation@gmail.com and apply.polareducation@gmail.com or message us directly on social media and chat Platform @9762120099 and @9851249082.",
     },
   ];
 
@@ -40,7 +39,7 @@ function FAQSection() {
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-blue-50">
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
-          Frequently <span className="text-orange-500">Asked Questions</span>
+          Frequently <span className="text-primary">Asked Questions</span>
         </h2>
         <p className="text-lg text-blue-700/80">
           Find answers to the most common questions about our study abroad
@@ -62,7 +61,7 @@ function FAQSection() {
                 {faq.question}
               </span>
               <ChevronDown
-                className={`w-6 h-6 text-orange-500 transition-transform ${
+                className={`w-6 h-6 text-primary transition-transform ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
               />

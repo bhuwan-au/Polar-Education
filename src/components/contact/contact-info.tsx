@@ -75,6 +75,13 @@ export default function ContactInfo() {
               >
                 doc.polareducation@gmail.com
               </a>
+              <br />
+              <a
+                href="mailto:apply.polareducation@gmail.com"
+                className="hover:text-primary"
+              >
+                apply.polareducation@gmail.com
+              </a>
             </p>
           </div>
         </div>

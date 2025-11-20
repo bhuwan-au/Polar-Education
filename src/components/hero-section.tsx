@@ -46,14 +46,14 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-lg hover:shadow-orange-500/40 text-lg"
+              className="flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-lg hover:shadow-orange-500/40 text-lg"
             >
               Book Free Consultation
               <ArrowRight size={20} />
             </Link>
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 border-2 border-blue-200 text-blue-100 px-8 py-4 rounded-lg font-semibold hover:bg-blue-800/20 transition-all text-lg"
+              className="flex justify-center items-center gap-2 border-2 border-blue-200 text-blue-100 px-8 py-4 rounded-lg font-semibold hover:bg-blue-800/20 transition-all text-lg"
             >
               Learn More
             </Link>
