@@ -3,7 +3,7 @@ export const contactInfo = {
   phone: "+977-01-4540500",
   email: "info@polareducation.com.np",
   social: {
-    facebook: "https://www.facebook.com/share/1Cu5iCbdRn",
+    facebook: "https://www.facebook.com/share/1D3p8Rtmod",
     instagram: "https://www.instagram.com/polar_education_consultancy",
     linkedin: "https://www.linkedin.com/in/polar-education-0a2306391",
     youtube: "https://www.youtube.com/@polareducation-s6f",
