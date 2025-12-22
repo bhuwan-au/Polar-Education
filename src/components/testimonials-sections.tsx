@@ -7,56 +7,49 @@ function TestimonialsSection() {
       location: "Australia 🇦🇺",
       text: "I had visited several consultancies before, but none matched the trust and clarity Polar Education provided. Their detailed guidance made the entire Australia documentation process smooth and stress-free.",
       rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Dipesh+Khadka&background=0D8ABC&color=fff&rounded=true",
+      image: "/testimonials/dipesh-khadka.jpg",
     },
     {
       name: "Dikshya Khadka",
       location: "Australia 🇦🇺",
       text: "Polar Education truly turned my dream of studying abroad into reality. The team supported me at every step and ensured my application was handled with complete care.",
       rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Dikshya+Khadka&background=F39C12&color=fff&rounded=true",
+      image: "/testimonials/dikshya-khadka.jpg",
     },
-    {
-      name: "Shabhana Shrestha",
-      location: "Australia 🇦🇺",
-      text: "The support I received from Polar Education was beyond my expectations. Their documentation guidance and one-on-one communication made the process surprisingly simple.",
-      rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Shabhana+Shrestha&background=8E44AD&color=fff&rounded=true",
-    },
+    // {
+    //   name: "Shabhana Shrestha",
+    //   location: "Australia 🇦🇺",
+    //   text: "The support I received from Polar Education was beyond my expectations. Their documentation guidance and one-on-one communication made the process surprisingly simple.",
+    //   rating: 5,
+    //   image: "/testimonials/shabhana-shrestha.jpg",
+    // },
     {
       name: "Amit Shrestha",
       location: "Australia 🇦🇺",
       text: "Polar helped me with university selection, scholarship guidance, and documentation without any additional cost. Their transparency and dedication truly stood out.",
       rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Amit+Shrestha&background=16A085&color=fff&rounded=true",
+      image: "/testimonials/amit-shrestha.jpg",
     },
     {
       name: "Abishekh Kafle",
       location: "Canada 🇨🇦",
       text: "I was confused at the beginning, but Polar’s counsellors explained everything clearly. Their expert guidance made my Canada application journey easy and well-organized.",
       rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Abishekh+Kafle&background=C0392B&color=fff&rounded=true",
+      image: "/testimonials/abishekh-kafle.jpg",
     },
     {
       name: "Alisha Singh",
       location: "USA 🇺🇸",
       text: "The U.S. application process felt overwhelming at first, but Polar supported me from university selection to final submission. Their attention to detail made all the difference.",
       rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Alisha+Singh&background=2980B9&color=fff&rounded=true",
+      image: "/testimonials/alisha-singh.jpg",
     },
     {
       name: "Shubham Khadka",
       location: "Australia 🇦🇺",
       text: "From Kathmandu to my hometown, Polar’s continuous communication and clear documentation support made my entire journey effortless. I’m truly grateful for their guidance.",
       rating: 5,
-      image:
-        "https://ui-avatars.com/api/?name=Shubham+Khadka&background=27AE60&color=fff&rounded=true",
+      image: "/testimonials/shubham-khadka.jpg",
     },
   ];
 
@@ -75,14 +68,15 @@ function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative bg-white p-8 rounded-2xl shadow-sm border border-blue-100 hover:shadow-md hover:border-orange-300 transition-all text-left"
+              className="relative bg-white p-8 rounded-2xl shadow-sm border border-blue-100 hover:shadow-md hover:border-orange-300 transition-all text-left flex flex-col h-full"
             >
               {/* Quotation mark background */}
               <div className="absolute top-4 right-6 text-6xl text-orange-100 font-serif select-none">
                 “
               </div>
 
-              <div className="flex flex-col items-start">
+              {/* Content wrapper */}
+              <div className="flex flex-col flex-1">
                 {/* Stars */}
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -94,17 +88,17 @@ function TestimonialsSection() {
                   ))}
                 </div>
 
-                {/* Text */}
+                {/* Testimonial text */}
                 <p className="text-blue-800 italic mb-6 leading-relaxed text-lg relative z-10">
                   “{testimonial.text}”
                 </p>
 
-                {/* Profile */}
-                <div className="flex items-center gap-4 border-t border-blue-100 pt-4 mt-auto">
+                {/* Profile pinned to bottom */}
+                <div className="flex items-center gap-4 border-t border-blue-100 pt-4 mt-auto w-full">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover border-2 border-orange-400"
+                    className="w-16 h-16 rounded-full object-cover border-2 border-orange-400"
                   />
                   <div>
                     <p className="font-semibold text-blue-900">

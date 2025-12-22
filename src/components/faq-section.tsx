@@ -20,7 +20,7 @@ function FAQSection() {
     {
       question: "Which countries do you support for study abroad?",
       answer:
-        "We currently serve students applying to Australia, Canada, the UK, and the USA.",
+        "We currently serve students applying to Australia, Canada, UK, South Korea, Europe, New Zealand, and the USA.",
     },
     {
       question: "How can I contact support?",

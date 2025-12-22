@@ -1,19 +1,12 @@
-import {
-  BookOpen,
-  FileText,
-  Dessert as Passport,
-  Volume2,
-  Users,
-  CheckCircle,
-} from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import CTASection from "@/components/cta-section";
 
 const services = [
   {
-    icon: BookOpen,
-    title: "Education Counseling",
+    image: "/services/education-counselling.jpg",
+    title: "Education Counselling",
     description:
-      "Personalized guidance to choose the right course and destination based on your academic profile, interests, and career goals.",
+      "Personalized guidance to help you choose the right country, course, and institution that fits your career goals.",
     details: [
       "University selection based on your profile",
       "Course recommendation and comparison",
@@ -22,10 +15,10 @@ const services = [
     ],
   },
   {
-    icon: FileText,
+    image: "/services/application-enrollment.jpg",
     title: "Application & Enrollment",
     description:
-      "We handle the entire application process, ensuring all documents are properly prepared and submitted on time.",
+      "End-to-end support in preparing, verifying, and submitting your applications with complete documentation.",
     details: [
       "Application form assistance",
       "Personal statement writing",
@@ -34,10 +27,10 @@ const services = [
     ],
   },
   {
-    icon: Passport,
+    image: "/services/visa-assistance.jpg",
     title: "Visa Assistance",
     description:
-      "Expert support navigating visa requirements and documentation for your chosen destination country.",
+      "Expert assistance through every step of the visa process with updated knowledge of country-specific requirements.",
     details: [
       "Visa requirement consultation",
       "Document preparation checklist",
@@ -46,10 +39,10 @@ const services = [
     ],
   },
   {
-    icon: Volume2,
+    image: "/services/ielts-preparation.jpg",
     title: "IELTS Preparation",
     description:
-      "Coaching and resources to achieve your required IELTS band score for university admission and visa requirements.",
+      "Join our expert-led IELTS classes designed to help you achieve your target band score with confidence.",
     details: [
       "Test format overview",
       "Targeted skill development",
@@ -58,27 +51,27 @@ const services = [
     ],
   },
   {
-    icon: Users,
-    title: "Post-Arrival Support",
+    image: "/services/study-abroad-guidance.jpg",
+    title: "Study Abroad Guidance",
     description:
-      "Continued support even after you arrive at your university, helping with accommodation and adjustment.",
+      "Trusted support for studying in Australia, Canada, the UK, and the USA — from selection to settlement.",
+    details: [
+      "Country and university selection",
+      "Pre-departure guidance",
+      "Documentation support",
+      "Settlement assistance",
+    ],
+  },
+  {
+    image: "/services/post-placement-support.jpg",
+    title: "Post-Placement Support",
+    description:
+      "We continue to assist you even after you’ve reached your destination — ensuring a smooth transition abroad.",
     details: [
       "Accommodation guidance",
       "Orientation assistance",
       "Ongoing mentoring",
       "Career guidance",
-    ],
-  },
-  {
-    icon: CheckCircle,
-    title: "Scholarship Guidance",
-    description:
-      "Help identifying and applying for scholarships to make your education more affordable.",
-    details: [
-      "Scholarship search assistance",
-      "Application support",
-      "Document preparation",
-      "Success tips and strategies",
     ],
   },
 ];
@@ -101,35 +94,46 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
               return (
                 <div
                   key={index}
-                  className="p-8 bg-card rounded-lg border border-border hover:shadow-lg transition-shadow"
+                  className="bg-card rounded-lg border border-border hover:shadow-lg transition-shadow flex flex-col h-full overflow-hidden"
                 >
-                  <div className="mb-6 w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon className="text-primary" size={28} />
+                  {/* Full-width image */}
+                  <div className="w-full h-44 bg-muted overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.details.map((detail, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-muted-foreground"
-                      >
-                        <CheckCircle
-                          size={18}
-                          className="text-primary mt-0.5 flex-shrink-0"
-                        />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
+
+                  {/* Content */}
+                  <div className="p-8 flex flex-col flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-foreground">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-muted-foreground mb-6">
+                      {service.description}
+                    </p>
+
+                    {/* Details pinned lower */}
+                    <ul className="space-y-2 mt-auto">
+                      {service.details.map((detail, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-muted-foreground"
+                        >
+                          <CheckCircle
+                            size={18}
+                            className="text-primary mt-0.5 shrink-0"
+                          />
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               );
             })}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function HeroSection() {
   return (
-    <section className="relative pt-24 pb-32 overflow-hidden bg-gradient-to-br from-[#0a1e3d] via-[#1e3a8a] to-[#fb923c] text-white">
+    <section className="relative pt-24 pb-32 overflow-hidden bg-linear-to-br from-[#0a1e3d] via-[#1e3a8a] to-[#fb923c] text-white">
       {/* Floating flag background layer */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[5%] left-[10%] flex flex-wrap gap-6 opacity-40">
@@ -27,6 +27,21 @@ export function HeroSection() {
             alt="USA"
             className="flag-float animate-float4 ml-12 mt-2"
           />
+          <img
+            src="https://flagcdn.com/w40/eu.png"
+            alt="Europe"
+            className="flag-float animate-float1 ml-12 mt-2"
+          />
+          <img
+            src="https://flagcdn.com/w40/nz.png"
+            alt="New Zealand"
+            className="flag-float animate-float4 ml-12 mt-2"
+          />
+          <img
+            src="https://flagcdn.com/w40/kr.png"
+            alt="South Korea"
+            className="flag-float animate-float4 ml-12 mt-2"
+          />
         </div>
       </div>
 
@@ -35,8 +50,8 @@ export function HeroSection() {
         {/* Left side */}
         <div className="text-center lg:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            Your Gateway to{" "}
-            <span className="text-orange-400">Global Education</span> Success
+            Pathway to Achieving Global Education Success{" "}
+            <span className="text-primary">Apply For Nepali Students</span>
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-10 text-blue-100 max-w-xl mx-auto lg:mx-0">
             Reliable, ethical, and professional guidance for students aspiring
@@ -71,7 +86,7 @@ export function HeroSection() {
             />
 
             {/* Gradient overlay for better contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e3d]/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0a1e3d]/70 via-transparent to-transparent" />
 
             {/* Text inside the image */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-blue-900/70 backdrop-blur-md px-6 py-3 rounded-full text-sm sm:text-base shadow-lg border border-white/10 text-center">
