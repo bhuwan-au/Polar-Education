@@ -55,6 +55,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  to="/gallery"
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/contact"
                   className="opacity-80 hover:opacity-100 transition-opacity"
                 >
@@ -81,10 +89,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {/* Address */}
               <li className="flex items-start gap-3">
-                <MapPin
-                  size={20}
-                  className="text-primary mt-1 flex-shrink-0"
-                />
+                <MapPin size={20} className="text-primary mt-1 shrink-0" />
                 <span className="opacity-80">{contactInfo.address}</span>
               </li>
 

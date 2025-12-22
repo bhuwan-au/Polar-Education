@@ -59,6 +59,13 @@ export default function Navigation() {
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </Link>
             <Link
+              to="/gallery"
+              className="relative group font-medium text-foreground px-2 py-1 hover:text-primary transition-colors"
+            >
+              Gallery
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+            </Link>
+            <Link
               to="/contact"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-lg shadow-md hover:shadow-lg hover:opacity-95 transition-all font-semibold"
             >
@@ -115,6 +122,15 @@ export default function Navigation() {
                       className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
                     >
                       Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/gallery"
+                      onClick={handleClose}
+                      className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      Gallery
                     </Link>
                   </li>
                   <li>
